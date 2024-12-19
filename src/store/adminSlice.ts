@@ -118,6 +118,7 @@ const adminSlice = createSlice({
         state.isLoading = false;
         if (action.payload && action.payload?.data?.status !== false) {
           const token = action.payload.data.data;
+          console.log("token", token);
           const decodedToken: any = jwtDecode(token);
           state.isAuth = true;
           state.admin = decodedToken;

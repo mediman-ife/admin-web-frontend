@@ -25,7 +25,9 @@ const Navigator = (props: any) => {
           <Link
             href={{ pathname: path }}
             className={`${
-              location === path || location === subPath || location === subPath1 ||
+              location === path ||
+              location === subPath ||
+              location === subPath1 ||
               location === subPath2
                 ? "activeMenu"
                 : ""
@@ -49,9 +51,11 @@ const Navigator = (props: any) => {
           </Link>
         </Tooltip>
         {/* If Submenu */}
-        <Tooltip title={name} placement="right">
-          {props.children}
-        </Tooltip>
+        {props.children && (
+          <Tooltip title={name} placement="right">
+            {props.children}
+          </Tooltip>
+        )}
       </li>
     </>
   );

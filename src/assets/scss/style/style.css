@@ -75,11 +75,11 @@ body {
   }
 }
 .mainAdminGrid .mainSidebar .sideBar .navigation .mainMenu .navTitle {
-  text-align: start;
+  text-align: flex-start;
   padding-left: 10px;
 }
 .mainAdminGrid .mainSidebar .sideBar .navigation .mainMenu .activeMenu {
-  text-align: start;
+  text-align: flex-start;
 }
 .mainAdminGrid .mainSidebar .sideBar .navigation .mainMenu > li > .activeMenu {
   color: #0055FF !important;
@@ -134,7 +134,7 @@ body {
   padding-top: 10px;
 }
 .mainAdminGrid .mainSidebar .sideBar .navigation .mainMenu li .subMenu .subhead {
-  text-align: start;
+  text-align: flex-start;
   display: none;
   margin-bottom: 20px;
   cursor: pointer;
@@ -423,7 +423,7 @@ body {
 }
 .mainAdminGrid .mainDashboard .mainDashbox .dashBox .boxFooter {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
 }
 .mainAdminGrid .mainDashboard .mainDashbox .dashBox .boxFooter .boxLink a {

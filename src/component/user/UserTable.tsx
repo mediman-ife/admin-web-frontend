@@ -16,8 +16,6 @@ import NotificationDialogue from "./NotificationDialogue";
 const UserTable = () => {
   const dispatch = useAppDispatch();
 
- 
-
   const { dialogue, dialogueType } = useSelector(
     (state: RootStore) => state.dialogue
   );
@@ -40,7 +38,6 @@ const UserTable = () => {
     dispatch(getAllUser(payload));
   }, [dispatch, search, page, rowsPerPage]);
 
-
   const handleChangePage = (event: any, newPage: any) => {
     setPage(newPage);
   };
@@ -62,7 +59,6 @@ const UserTable = () => {
     dispatch(openDialog({ type: "notification", data: { id, type: "user" } }));
   };
   const handleStatus = (id: any) => {
-    
     dispatch(blockuser(id));
   };
 
@@ -74,8 +70,6 @@ const UserTable = () => {
   };
 
   const handleInfo = (id: any) => {
-    
-
     router.push({
       pathname: "/UserProfile",
       query: { id: id },
@@ -198,8 +192,8 @@ const UserTable = () => {
                 fill="#7B2BFF"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M13.0534 3H12.9466C10.7993 2.99999 9.11646 2.99998 7.80345 3.17651C6.45951 3.3572 5.39902 3.73426 4.56664 4.56664C3.73426 5.39902 3.3572 6.45951 3.17651 7.80345C2.99998 9.11646 2.99999 10.7993 3 12.9466V13.0534C2.99999 15.2007 2.99998 16.8835 3.17651 18.1966C3.3572 19.5405 3.73426 20.601 4.56664 21.4334C5.39902 22.2658 6.45951 22.6428 7.80345 22.8235C9.11646 23 10.7993 23 12.9466 23H13.0534C15.2007 23 16.8835 23 18.1966 22.8235C19.5405 22.6428 20.601 22.2658 21.4334 21.4334C22.2658 20.601 22.6428 19.5405 22.8235 18.1966C23 16.8835 23 15.2007 23 13.0534V12.9466C23 10.7993 23 9.11646 22.8235 7.80345C22.6428 6.45951 22.2658 5.39902 21.4334 4.56664C20.601 3.73426 19.5405 3.3572 18.1966 3.17651C16.8835 2.99998 15.2007 2.99999 13.0534 3ZM5.5533 5.5533C6.08321 5.02339 6.80016 4.7193 7.98938 4.55941C9.19866 4.39683 10.7877 4.39535 13 4.39535C15.2123 4.39535 16.8013 4.39683 18.0106 4.55941C19.1998 4.7193 19.9167 5.02339 20.4467 5.5533C20.9767 6.08321 21.2807 6.80016 21.4406 7.98938C21.6032 9.19866 21.6047 10.7877 21.6047 13C21.6047 13.4188 21.6046 13.8153 21.6034 14.1911L21.3968 14.1625C18.7514 13.7962 16.3307 15.1714 15.098 17.2443C13.5078 13.221 9.30553 10.4773 4.60998 11.1515L4.39997 11.1818C4.41054 9.87434 4.44528 8.83829 4.55941 7.98938C4.7193 6.80016 5.02339 6.08321 5.5533 5.5533Z"
                 fill="#7B2BFF"
               />
@@ -270,8 +264,6 @@ const UserTable = () => {
             totalData={total}
           />
         </div>
-
-      
       </div>
     </>
   );

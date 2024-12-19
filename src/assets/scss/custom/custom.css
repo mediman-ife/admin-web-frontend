@@ -256,7 +256,7 @@ h6 {
   font-family: "Poppins", sans-serif !important;
   font-size: 20px;
   position: relative !important;
-  text-align: start !important;
+  text-align: flex-start !important;
   /*Tablate Device*/
   /* Image Input */
   /* Normal Select */
@@ -353,7 +353,7 @@ h6 {
           appearance: none;
   background-color: transparent;
   border: 1px solid #cecece;
-  text-align: start;
+  text-align: flex-start;
   height: auto;
 }
 .inputData .selectMain .selectBox .showSelectValue p {
@@ -672,7 +672,7 @@ h6 {
 }
 .inputData .imageBoxMain {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 15px;
 }
 .inputData .imageBoxMain .boxImage {
