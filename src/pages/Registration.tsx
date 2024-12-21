@@ -22,20 +22,17 @@ export default function Registration() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
-  const [code, setCode] = useState("");
 
   const [error, setError] = useState({
     email: "",
     password: "",
     newPassword: "",
-    code: "",
   });
 
   const handleSubmit = () => {
     if (
       !email ||
       !password ||
-      !code ||
       !newPassword 
     ) {
       let errorObj: any = {};
@@ -53,14 +50,11 @@ export default function Registration() {
           ...errorObj,
           newPassword: "New Password and Confirm Password doesn't match !",
         };
-      if (!code)
-        errorObj = { ...errorObj, code: "purchase code is required !" };
       return setError(errorObj);
     } else {
       let payload: any = {
         email,
         password,
-        code,
       };
       dispatch(signUpAdmin(payload));
     }
@@ -79,7 +73,7 @@ export default function Registration() {
             </div>
             <h1>Sign Up !</h1>
             <h6 className="fw-bold text-theme  me-auto my-auto fs-15 py-2 title">
-              Please Enter Your Email id, Password and Purchase Code
+              Please Enter Your Email id and Password
             </h6>
             <div>
               <div className="col-12 ">
@@ -152,31 +146,6 @@ export default function Registration() {
                       return setError({
                         ...error,
                         newPassword: "",
-                      });
-                    }
-                  }}
-                />
-              </div>
-              <div className="col-12 ">
-                <ExInput
-                  type={`text`}
-                  id={`code`}
-                  name={`code`}
-                  value={code}
-                  label={`Purchase code`}
-                  placeholder={`Purchase code`}
-                  errorMessage={error.code && error.code}
-                  onChange={(e: any) => {
-                    setCode(e.target.value);
-                    if (!e.target.value) {
-                      return setError({
-                        ...error,
-                        code: `Purchase code is Required`,
-                      });
-                    } else {
-                      return setError({
-                        ...error,
-                        code: "",
                       });
                     }
                   }}
